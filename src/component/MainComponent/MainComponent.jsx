@@ -4,11 +4,15 @@ import SignIn from "../SignInComponent/SignInComponent";
 import CardForm from '../CardFormComponent/CardForm'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import Home from "../HomeCopmonent/HomeCopmonent";
-import CancelButton from "../ButtonComponent/CancelButton";
-import {logout, isLogin} from "../../Server/Auth";
-import {useHistory} from "react-router";
+import { isLogin} from "../../Server/Auth";
 import styles from './main.module.css'
 import Header from "../HeaderComponent/NavbarComponent";
+import Chat from "../ChatComponent/ChatComponent";
+import Contactus from "../ContactUsCopmonent/ContactusComponent";
+
+
+
+
 function PrivateRoute ({component: Component, authed, ...rest}) {
 
     return (
@@ -57,6 +61,18 @@ const Main = ()=> {
             </div>
         )
     }
+    const ChatPage = ()=> {
+
+        return (
+            <div>
+                <Header  />
+                <Jumbotron style={{marginBottom: 0}} className={styles.jumbotron}>
+                    <h2>Chat Application </h2>
+                </Jumbotron>
+                 <Chat />
+            </div>
+        )
+    }
     const HomePage = ()=> {
         return (
             <div>
@@ -72,6 +88,21 @@ const Main = ()=> {
         )
     }
 
+    const ContactUsPage = ()=> {
+        return (
+            <div>
+                <Header  />
+                <Jumbotron className={styles.jumbotron}>
+                    <h2>Contact us</h2>
+
+                </Jumbotron>
+                <div className="container  align-items-center">
+                    <Contactus />
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div>
             <main >
@@ -80,6 +111,8 @@ const Main = ()=> {
                     <Route  path='/login' component={SignInForm}/>
                     <Route path='/signup' component={SignUpForm}/>
                     <PrivateRoute exact path='/' component={HomePage} />
+                    <PrivateRoute exact path='/chat' component={ChatPage} />
+                    <PrivateRoute exact path='/contactus' component={ContactUsPage} />
 
                 </Switch>
             </main>
