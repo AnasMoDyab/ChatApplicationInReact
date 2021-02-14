@@ -1,0 +1,13 @@
+.header {
+
+
+    background: linear-gradient(45deg, #211919 40%, #020202 90%);
+    color: #444545;
+    margin-bottom: 0;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.nav-link a{
+    color: #ffffff!important;
+}
