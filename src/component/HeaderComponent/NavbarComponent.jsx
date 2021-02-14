@@ -29,14 +29,14 @@ const Header = () => {
                             <NavItem >   <NavLink className="nav-link" to='/'> <span
                                 className="fa fa-home fa-lg"> Home</span></NavLink>
                             </NavItem>
-                            <NavItem >   <NavLink className="nav-link" to='/'> <span
-                                className="fa fa-info fa-lg "> About </span></NavLink>
+                            <NavItem >   <NavLink className="nav-link" to='/chat'> <span
+                                className="fa fa-info fa-lg "> Chat </span></NavLink>
                             </NavItem>
                             <NavItem >
                                 <NavLink className="nav-link" to='/'> <span
                                     className="fa fa-address-card fa-lg"> My profile</span></NavLink>
                             </NavItem>
-                            <NavItem >   <NavLink className="nav-link" to='/'> <span
+                            <NavItem >   <NavLink className="nav-link" to='/contactus'> <span
                                 className="fa fa-calendar fa-lg"> Contact us </span></NavLink>
                             </NavItem>
 
