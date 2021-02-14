@@ -1,0 +1,1 @@
+export const baseUrlUser = "http://localhost:3002/users/"
